@@ -1,0 +1,53 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Mapa de Trayectorias</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+
+    <link rel="stylesheet" href="css.css" />
+</head>
+
+<body>
+
+    <div class="controles">
+
+        <div class="titulo-menu"> Málaga Route Map</div>
+
+        <label>Puntos en la ruta:</label>
+        <input type="number" id="cantidad" value="" min="2" max="10">
+
+        <br><br>
+
+        <label>Modo de transporte:</label>
+        <select id="modoTransporte">
+
+            <option value="driving"> En coche</option>
+            <option value="foot"> A pie</option>
+
+        </select>
+
+        <br><br>
+
+        <button onclick="generarRuta()">
+            Generar Nueva Ruta
+        </button>
+
+        <p id="distanciaTotal"> Distancia: 0 km</p>
+
+        <p id="tiempoTotal">Tiempo estimado: 0 min</p>
+
+    </div>
+
+    <div id="map"></div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
