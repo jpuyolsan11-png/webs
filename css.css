@@ -1,5 +1,5 @@
 button {
-    margin: 10px;
+    margin: 10px 0;
     padding: 10px;
     cursor: pointer;
 }
@@ -18,48 +18,31 @@ html {
     width: 100vw;
 }
 
-/* MENÚ MALAGA */
 .controles {
-
     position: absolute;
     top: 15px;
     right: 15px;
-
     z-index: 1000;
-
     width: 270px;
-
     padding: 18px;
-
     border-radius: 20px;
-
-    background: linear-gradient(145deg,
-            rgba(0, 102, 255, 0.35),
-            rgba(0, 180, 130, 0.25));
-
+    background: linear-gradient(145deg, rgba(0, 102, 255, 0.35), rgba(0, 180, 130, 0.25));
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-
     border: 1px solid rgba(255, 255, 255, 0.25);
-
     box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
-
     font-family: Arial, sans-serif;
-
     color: white;
 }
 
 .titulo-menu {
-
     text-align: center;
     font-size: 20px;
     font-weight: bold;
-
     margin-bottom: 10px;
 }
 
 .controles label {
-
     font-weight: bold;
     display: block;
     margin-top: 10px;
@@ -67,70 +50,58 @@ html {
 
 .controles input,
 .controles select {
-
     width: 100%;
     padding: 10px;
-
     border-radius: 10px;
     border: none;
-
     margin-top: 5px;
-
     background: rgba(255, 255, 255, 0.9);
 }
 
 .controles button {
-
     width: 100%;
-    padding: 12px;
-
     border: none;
     border-radius: 12px;
-
     background: linear-gradient(135deg, #ffb703, #fb8500);
-
     color: white;
     font-weight: bold;
-
     cursor: pointer;
 }
 
 #distanciaTotal,
 #tiempoTotal {
-
     margin-top: 10px;
-
     padding: 10px;
-
     border-radius: 10px;
-
     background: rgba(0, 0, 0, 0.25);
-
     text-align: center;
     font-weight: bold;
+}
+
+/* GASTO GASOLINA OCULTO POR DEFECTO */
+#gastoGasolina {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 183, 3, 0.4);
+    text-align: center;
+    font-weight: bold;
+    display: none;
 }
 
 .leaflet-routing-container {
     display: none !important;
 }
 
-/* marcador */
 .marcador-personalizado {
-
     background: linear-gradient(135deg, #0066ff, #00c3ff);
-
     color: white;
-
     width: 30px;
     height: 30px;
-
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-weight: bold;
-
     border: 2px solid white;
 }
