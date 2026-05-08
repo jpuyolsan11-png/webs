@@ -3,51 +3,44 @@
 <head>
     <meta charset="utf-8">
     <title>Mapa de Trayectorias</title>
-
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
-
     <link rel="stylesheet" href="css.css" />
 </head>
 
 <body>
-
     <div class="controles">
-
         <div class="titulo-menu"> Málaga Route Map</div>
 
-        <label>Puntos en la ruta:</label>
-        <input type="number" id="cantidad" value="" min="2" max="10">
+        <label>¿A dónde quieres ir?</label>
+        <input type="text" id="destinoInput" placeholder="">
+        <button onclick="irADestino()">Calcular Ruta a Destino</button>
 
-        <br><br>
+        <hr style="opacity: 0.2; margin: 15px 0;">
+
+        <label>Puntos aleatorios en la ruta:</label>
+        <input type="number" id="cantidad" value="" min="2" max="10">
 
         <label>Modo de transporte:</label>
         <select id="modoTransporte">
-
             <option value="driving"> En coche</option>
             <option value="foot"> A pie</option>
-
         </select>
 
-        <br><br>
-
-        <button onclick="generarRuta()">
-            Generar Nueva Ruta
+        <button onclick="generarRuta()" style="margin-top: 15px;">
+            Generar Ruta Aleatoria
         </button>
 
         <p id="distanciaTotal"> Distancia: 0 km</p>
-
         <p id="tiempoTotal">Tiempo estimado: 0 min</p>
-
+        <p id="gastoGasolina">Consumo: 0 L</p>
     </div>
 
     <div id="map"></div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
-
     <script src="script.js"></script>
-
 </body>
 
 </html>
